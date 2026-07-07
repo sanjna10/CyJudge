@@ -558,8 +558,8 @@ def composite_ranking_reward(completions, gold_ranking, **kwargs):
 
 # Notes
 
-- The repository already contains the trained SFT adapter.
-- The repository already contains all three GRPO-trained adapters.
+- The repository already contains the trained SFT adapter and checkpoints.
+- The repository already contains all three GRPO-trained adapters and checkpoints.
 - The repository also contains prediction outputs from two independent inference runs for each GRPO model.
 - The provided notebooks are reference implementations demonstrating the training and evaluation pipeline.
 - To evaluate any model, simply update the adapter path in **Inference.ipynb** and the prediction CSV path in **inference_metrics.ipynb**. To run the inference twice you need to seperately run the models twice.
