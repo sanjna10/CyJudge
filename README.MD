@@ -4,6 +4,28 @@ This repository contains the code, trained adapters, inference notebooks, evalua
 
 ---
 
+---
+
+> [!IMPORTANT]
+> **Please use the updated notebooks included in this repository for reproducing the experiments.**
+>
+> - `Inference.ipynb`
+> - `inference_metrics.ipynb`
+> - `sft_training.ipynb`
+> - `grpo_base_models.ipynb`
+>
+> These notebooks contain the **final training, inference, and evaluation pipeline**, including the updated  explicit step-by-step instructions, required package installation commands, dependencies, and paths. They should be used as the primary reference for reproducing the results reported in the paper.
+
+# Additional Resources
+
+The complete training checkpoints, datasets, inference notebooks, evaluation scripts, and prediction outputs used in this work are available in the anonymous artifact repository:
+
+**https://anonymous.4open.science/r/CyJudge-C138/README.MD**
+
+The released artifacts are sufficient to reproduce the reported experiments and evaluation results.
+
+---
+
 # Project Structure
 
 ```
@@ -282,6 +304,9 @@ Hyperparameters
 | LR Scheduler | Cosine |
 | Warmup Ratio | 0.05 |
 | Weight Decay | 0.01 |
+| Precision | BF16 |
+| Save Steps | 250 |
+| Save Total Limit | 2 |
 
 ---
 
@@ -299,11 +324,13 @@ Hyperparameters
 | Effective Batch Size | 32 |
 | Number of Generations | 4 |
 | Max Prompt Length | 2048 |
-| Max Completion Length | 8 |
+| Max Completion Length | 32 |
 | Optimizer | AdamW 8-bit |
 | LR Scheduler | Cosine |
 | Warmup Ratio | 0.05 |
 | Weight Decay | 0.01 |
+| Temperature | 0.7 |
+| Top-p | 0.9 |
 
 ---
 
@@ -534,5 +561,5 @@ def composite_ranking_reward(completions, gold_ranking, **kwargs):
 - The repository already contains all three GRPO-trained adapters.
 - The repository also contains prediction outputs from two independent inference runs for each GRPO model.
 - The provided notebooks are reference implementations demonstrating the training and evaluation pipeline.
-- To evaluate any model, simply update the adapter path in **Inference.ipynb** and the prediction CSV path in **inference_metrics.ipynb**.
+- To evaluate any model, simply update the adapter path in **Inference.ipynb** and the prediction CSV path in **inference_metrics.ipynb**. To run the inference twice you need to seperately run the models twice.
 - The released adapters can be used directly for inference without retraining.
