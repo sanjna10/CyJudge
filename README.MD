@@ -275,9 +275,9 @@ Hyperparameters
 | LoRA Dropout | 0 |
 | Target Modules | q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj |
 | Max Sequence Length | 2048 |
-| Epochs | 1 |
+| Epochs | 2 |
 | Learning Rate | 5e-6 |
-| Effective Batch Size | 32 |
+| Effective Batch Size | 16 |
 | Optimizer | AdamW 8-bit |
 | LR Scheduler | Cosine |
 | Warmup Ratio | 0.05 |
