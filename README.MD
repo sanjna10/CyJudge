@@ -18,13 +18,15 @@ This repository contains the code, trained adapters, inference notebooks, evalua
 
 # Additional Resources
 
+Flop budget is calculated in `flop_budget.md`
+dependencies are explicitly mentioned on the first cell of every `.ipynb` notebook and on `dependencies_imports.ipynb`
+
 The complete training checkpoints, datasets, inference notebooks, evaluation scripts, and prediction outputs used in this work are available in the anonymous artifact repository:
 
 **https://anonymous.4open.science/r/CyJudge-C138/README.MD**
 
-The released artifacts are sufficient to reproduce the reported experiments and evaluation results.
-Flop budget is calculated in `flop_budget.md`
-dependencies are explicitly mentioned on the first cell of every `.ipynb` notebook and on `dependencies_imports.ipynb`
+
+
 ---
 
 # Project Structure
