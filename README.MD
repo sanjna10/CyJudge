@@ -14,7 +14,7 @@ This repository contains the code, trained adapters, inference notebooks, evalua
 > - `sft_training.ipynb`
 > - `grpo_base_models.ipynb`
 >
-> These notebooks contain the **final training, inference, and evaluation pipeline**, including the updated  explicit step-by-step instructions, required package installation commands, dependencies, and paths. They should be used as the primary reference for reproducing the results reported in the paper.
+> These notebooks contain the **final training, inference, and evaluation pipeline**, including the updated  explicit step-by-step instructions, required package installation commands, dependencies, paths. They should be used as the primary reference for reproducing the results reported in the paper.
 
 # Additional Resources
 
@@ -23,7 +23,8 @@ The complete training checkpoints, datasets, inference notebooks, evaluation scr
 **https://anonymous.4open.science/r/CyJudge-C138/README.MD**
 
 The released artifacts are sufficient to reproduce the reported experiments and evaluation results.
-
+Flop budget is calculated in `flop_budget.md`
+dependencies are explicitly mentioned on the first cell of every `.ipynb` notebook and on `dependencies_imports.ipynb`
 ---
 
 # Project Structure
